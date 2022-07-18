@@ -2,7 +2,9 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-*
+h5 {
+    font-size: 1rem;
+}
 .container {
     display: grid;
     height: 100vh;
@@ -41,9 +43,10 @@ body {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
        "Projects Announcements"
-       "Projects Tranding-Items";
+       "Projects Trending-Items";
     overflow: auto;
     background:  #e1e8f0;
+    grid-gap: 2rem;
 }
 
 #menu-1, #menu-2 {
@@ -69,12 +72,64 @@ body {
 #projects {
     grid-area: Projects;
 }
+#projects h3, #announcements h3 {
+    padding-bottom: 1rem;
+}
+#projects-sub {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1.5rem;
+}
+#projects-sub > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-left: 0.5rem solid #f1b32b;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+#projects-sub > div h4 {
+    margin-bottom: 0rem;
+}
+#projects-sub > div p {
+    color: #585858;
+}
 #announcements {
     grid-area: Announcements;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 0.5rem;
 }
-#tranding-items {
-    grid-area: Tranding-Items;
+#announcements-sub {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1.5rem;
 }
+#announcement-sub > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+}
+hr { margin: 10px 0 10px 0; }
+#announcement-sub > div h5 {
+    margin-bottom: 0rem;
+    margin-top: 0.5rem;
+}
+#announcement-sub > div p {
+    color: #585858;
+    font-size: 0.8rem;
+}
+
+#trending-items {
+    grid-area: Trending-Items;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 0.5rem;
+}
+#trending-items-sub {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 
 svg {
     vertical-align: middle;
