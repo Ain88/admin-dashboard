@@ -129,6 +129,9 @@ hr { margin: 10px 0 10px 0; }
     grid-gap: 1.5rem;
     background-color: rgba(255, 255, 255, 0.8);
 }
+.border-bottom-grey {
+    border-bottom: 1px solid lightgrey;
+}
 
 
 svg {
